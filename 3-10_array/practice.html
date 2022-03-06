@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>テンプレート</title>
+<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../../_common/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="container">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.container -->
+</header>
+<main>
+<div class="container">
+<section>
+  <h1>やることリスト</h1>
+  <ul id ="list"></ul>  
+</section>
+</div><!-- /.container -->
+</main>
+<footer>
+<div class="container">
+<p>JavaScript Samples</p>
+</div><!-- /.container -->
+</footer>
+<script>
+  'use strict';
+
+  let todo = ['ジムに行く','買い物へ行く','掃除をする','英語の勉強'];
+  //pushメソッドで項目を追加できる
+  todo.push('歯医者に行く');
+  //for...of文
+  //変数(item)に配列(todo)から取り出した全てのデータを取り出す
+  for(let item of todo){
+    const li = `<li>${item}</li>`;
+    document.getElementById('list').
+    insertAdjacentHTML('beforeend',li);
+  }
+</script>
+</body>
+</html>
